@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="TicketPOS.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="BackupLocationBase" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\Users\John\Desktop</Value>
+    </Setting>
+    <Setting Name="ReceiptPrinterName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">POS58</Value>
+    </Setting>
+    <Setting Name="KitchenPrinterName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">POS80</Value>
+    </Setting>
+    <Setting Name="ShowReports" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

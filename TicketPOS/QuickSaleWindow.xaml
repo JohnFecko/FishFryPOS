@@ -1,0 +1,24 @@
+﻿<Window x:Class="TicketPOS.QuickSaleWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TicketPOS"
+        mc:Ignorable="d"
+        Title="Quick Sale" Height="361" Width="300" WindowStartupLocation="CenterScreen">
+    <Grid Background="#FFE8E0E0">
+        <StackPanel Margin="10">
+            <Label Content="Item" FontSize="18"></Label>
+            <ComboBox Name="comboItem" FontSize="18">
+                <ComboBoxItem Content="Donation"/>
+                <ComboBoxItem Content="Drink"/>
+                <ComboBoxItem Content="Raffle"/>
+            </ComboBox>
+
+            <Label Content="Quantity" FontSize="18" Margin="0 20 0 0"></Label>
+            <TextBox Name="txtQuantity" FontSize="18" TextChanged="txtQuantity_TextChanged"></TextBox>
+            <Button Name="btnSubmit" FontSize="18" Content="Save" Margin="0 40 0 0"  Padding="20,5,20,5" Click="btnSubmit_Click"></Button>
+            <Button Name="btnCancel" FontSize="18" Content="Cancel" Margin="0 25 0 0"  Padding="20,5,20,5" Click="btnCancel_Click"></Button>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,69 @@
+﻿<Window x:Class="TicketPOS.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TicketPOS"
+        mc:Ignorable="d"
+        Title="Ticket POS" Height="750" Width="900" Loaded="Window_Loaded">
+    <Grid Background="#FFE8E0E0">
+        <StackPanel Margin="50,0,50,0">
+            <GroupBox x:Name="groupTicket" Header="Table Number" Height="75" Width="750" HorizontalAlignment="Center" FontSize="18" Margin="21,0">
+                <TextBox x:Name="txtTicket" TextWrapping="Wrap" FontSize="18" Margin="10,8,10,4"/>
+            </GroupBox>
+            <GroupBox x:Name="groupName" Header="Last Name" Height="85" Width="750" HorizontalAlignment="Center" FontSize="18" Margin="21,0">
+                <StackPanel x:Name="panelName" Height="60" Margin="0,0,0,0" VerticalAlignment="Top">
+                    <local:CustomComboBox x:Name="comboName" IsEditable="True" FontSize="18" Margin="10,8" SelectionChanged="comboName_SelectionChanged" KeyUp="comboName_KeyUp" />
+                    <TextBox x:Name="txtName" Height="34" TextWrapping="Wrap" FontSize="18" Margin="10,8" />
+                </StackPanel>
+            </GroupBox>
+            <GroupBox x:Name="groupTimes" Header="Times" Height="116" Width="750" HorizontalAlignment="Center" FontSize="18" Margin="21,0">
+                <StackPanel x:Name="panelTimes" Height="91" Margin="0,0,0,0" VerticalAlignment="Top">
+                    <ComboBox x:Name="comboDates" FontSize="18" Margin="10,8" ItemStringFormat="d" SelectionChanged="comboDates_SelectionChanged" />
+                    <ComboBox x:Name="comboTimes" FontSize="18" Margin="10,8" ItemStringFormat="t" />
+                </StackPanel>
+            </GroupBox>
+            <GroupBox x:Name="groupItems" Header="Items" FontSize="18" HorizontalAlignment="Center" Width="750">
+                <StackPanel x:Name="panelItems" Margin="10,0,10,0" Orientation="Vertical">
+                </StackPanel>
+            </GroupBox>
+            <GroupBox FontSize="18" HorizontalAlignment="Center" Width="750" Height="53" Margin="21,0">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <WrapPanel Height="37" VerticalAlignment="Top" HorizontalAlignment="Right">
+                        <Label x:Name="label" Content="Total Price" FontSize="18" HorizontalAlignment="Right" Margin="0,0,20,0"/>
+                        <TextBox x:Name="txtTotal" TextWrapping="Wrap" Text="" Width="120" IsReadOnly="True" FontSize="18" HorizontalAlignment="Right" Height="30" Margin="0,4,0,0"/>
+                    </WrapPanel>
+                </StackPanel>
+            </GroupBox>
+            <GroupBox x:Name="groupNotes" Header="Notes" Height="75" Width="750" HorizontalAlignment="Center" FontSize="18" Margin="21,0">
+                <TextBox x:Name="txtNotes" TextWrapping="Wrap" FontSize="14" Margin="10,0,10,0" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" GotFocus="txtNotes_GotFocus" LostFocus="txtNotes_LostFocus"/>
+            </GroupBox>
+            <GroupBox x:Name="groupToGo" FontSize="18" HorizontalAlignment="Center" Width="750"  Margin="21,0">
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" >
+                        <CheckBox x:Name="chkToGo" Content="Take Out Order" Margin="0,15,0,0" FontSize="12">
+                            <CheckBox.LayoutTransform>
+                                <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
+                            </CheckBox.LayoutTransform>
+                        </CheckBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,15,0,0">
+                        <Button Name="btnScan" Content="Scan Ticket" Padding="20,5,20,5" Click="btnScan_Click" />
+                    </StackPanel>
+                    
+                </StackPanel>
+            </GroupBox>
+            <Button x:Name="button" Content="Complete Order" Padding="20,5,20,5"  VerticalAlignment="Bottom" Click="button_Click" FontSize="18" HorizontalAlignment="Center"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,0">
+
+                <Button x:Name="btnCancel" Content="Cancel Order" Padding="20,5,20,5"  VerticalAlignment="Bottom" FontSize="18" Click="btnCancel_Click" Margin="0,0,10,0"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Button x:Name="btnPrintReport" Content="Reports" Padding="20,5,20,5"  VerticalAlignment="Bottom" FontSize="18" Click="btnPrintReport_Click" Margin="0,0,10,0" />
+                    <Button x:Name="btnQuickSale" Content="Quick Sale" Padding="20,5,20,5"  VerticalAlignment="Bottom" FontSize="18" Click="btnQuickSale_Click" />
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+
+
+    </Grid>
+</Window>

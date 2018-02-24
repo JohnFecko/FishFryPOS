@@ -1,0 +1,17 @@
+﻿<Window x:Class="TicketPOS.PaymentWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TicketPOS"
+        mc:Ignorable="d"
+        Title="Payment Type" Height="398" Width="500" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="ToolWindow">
+    <Grid Background="#FFE8E0E0">
+        <StackPanel>
+            <Button Name="btnCash" Content="Cash" Padding="20" Margin="10" FontSize="18" Click="btnCash_Click"></Button>
+            <Button Name="btnCheck" Content="Check" Padding="20" Margin="10" FontSize="18" Click="btnCheck_Click"></Button>
+            <Button Name="btnCharge" Content="Charge" Padding="20" Margin="10" FontSize="18" Click="btnCharge_Click"></Button>
+            <Button Name="btnCancel" Content="Cancel" Padding="20" Margin="30" FontSize="18" Click="btnCancel_Click"></Button>
+        </StackPanel>
+    </Grid>
+</Window>
