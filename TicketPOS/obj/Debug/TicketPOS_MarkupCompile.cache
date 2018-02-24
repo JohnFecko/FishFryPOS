@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-Z:\CodeJF\TicketPOS\TicketPOS\obj\Debug\
+C:\Users\johnfecko\Desktop\FishFryPOS\TicketPOS\obj\Debug\
 TicketPOS
 none
 false
 DEBUG;TRACE
-Z:\CodeJF\TicketPOS\TicketPOS\App.xaml
+C:\Users\johnfecko\Desktop\FishFryPOS\TicketPOS\App.xaml
 5-170468508
 21556898210
-21-1692496693
-28-973372116
+19-1485961406
+28724317501
 MainWindow.xaml;OrderItem.xaml;PaymentWindow.xaml;QuickSaleWindow.xaml;ReportsWindow.xaml;
 
 False

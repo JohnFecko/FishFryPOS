@@ -3,17 +3,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.Serialization.Json;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using TicketPOS.Properties;
 
 namespace TicketPOS
@@ -287,10 +279,6 @@ namespace TicketPOS
                 _orderGuid = "";
                 _orderNumber = "";
                 _savedTotal = 0;
-                _scanState = ScanState.CancelOrder;
-                var frm = new FrmScanner(ScanSuccess, ScanFailure);
-                frm.ShowDialog();
-                frm = null;
             }
             else
             {
@@ -320,27 +308,6 @@ namespace TicketPOS
             }
         }
 
-        public void ScanSuccess(string text)
-        {
-            if (_scanState == ScanState.None)
-            {
-                return;
-            }
-
-            if (_scanState == ScanState.CancelOrder)
-            {
-                CancelOrder(text);
-            }
-            if (_scanState == ScanState.ScanTicket)
-            {
-                LoadDataFromOrderNumber(text);
-            }
-
-
-            _scanState = ScanState.None;
-        }
-
-        public void ScanFailure() { }
 
         private void btnPrintReport_Click(object sender, RoutedEventArgs e)
         {
@@ -600,13 +567,6 @@ namespace TicketPOS
             {
                 //control.Lock();
             }
-        }
-
-        private void btnScan_Click(object sender, RoutedEventArgs e)
-        {
-            _scanState = ScanState.ScanTicket;
-            var frm = new FrmScanner(ScanSuccess, ScanFailure, true);
-            frm.ShowDialog();
         }
 
         private void txtNotes_GotFocus(object sender, RoutedEventArgs e)

@@ -47,10 +47,8 @@
                             </CheckBox.LayoutTransform>
                         </CheckBox>
                     </StackPanel>
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,15,0,0">
-                        <Button Name="btnScan" Content="Scan Ticket" Padding="20,5,20,5" Click="btnScan_Click" />
-                    </StackPanel>
-                    
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,15,0,0"/>
+
                 </StackPanel>
             </GroupBox>
             <Button x:Name="button" Content="Complete Order" Padding="20,5,20,5"  VerticalAlignment="Bottom" Click="button_Click" FontSize="18" HorizontalAlignment="Center"/>
